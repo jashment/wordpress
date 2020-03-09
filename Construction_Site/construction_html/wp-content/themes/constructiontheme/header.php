@@ -30,9 +30,11 @@
       <?php wp_nav_menu(array('menu_id' => 'primaryNav')); ?>
       <ul id="secondaryNav">
         <li id="searchBar">
-          <form><input type="search" placeholder="Search" name="s" /><button type="submit" class="submit"><i
+          <form method="get" action="/"><input type="search" placeholder="Search" name="s" /><button type="submit" class="submit"><i
                 class="fa fa-search"></i></button></form>
         </li>
       </ul>
     </div>
   </nav>
+
+<main class="clearfix">
