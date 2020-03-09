@@ -1,0 +1,74 @@
+nav {
+  ul li ul {
+    /*rules for the sub menu items*/
+    z-index: 99;
+    background-color: lighten($menuColor, 10%);
+    left: -999em; /* pushes the menu way off to the side */
+    width: 5em;
+    padding-left: 0;
+  }
+
+  ul li:hover ul {
+    /* this displays the menus as drop downs  */
+    left: auto;
+    margin-left: 0;
+  }
+}
+main {
+  max-width: 75rem;
+  margin: 0 auto;
+
+  article.multiCol {
+    column-count: 2;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-rule: 1px solid silver;
+    -webkit-column-rule: 1px solid silver;
+    -moz-column-rule: 1px solid silver;
+    column-gap: 2%;
+    -webkit-column-gap: 2%;
+    -moz-column-gap: 2%;
+  }
+
+  /*----- Column Layout -----*/
+
+  @for $i from 1 through 12 {
+    $w: ($i / 12) * 100%;
+    .medium-#{$i} {
+      width: $w;
+      float: left;
+    }
+  }
+
+  div.sec2 {
+    padding-left: 0px;
+    margin-right: 0;
+  }
+}
+
+footer {
+  div.theirInfo {
+    display: grid;
+    grid-template-areas: "one two" "three three" "four four" "five five";
+    grid-template-columns: 50%;
+    grid-template-rows: auto;
+    article.contact {
+      grid-area: one;
+    }
+    article.news {
+      grid-area: two;
+    }
+    article.why {
+      grid-area: five;
+    }
+    article.phone {
+      grid-area: three;
+    }
+    article.hours {
+      grid-area: four;
+    }
+  }
+  ul.social li a {
+    font-size: 2.5rem;
+  }
+}

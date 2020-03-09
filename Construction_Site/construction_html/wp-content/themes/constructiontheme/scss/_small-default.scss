@@ -1,0 +1,376 @@
+html {
+  font-family: "Open Sans";
+}
+
+header{
+  position: relative;
+  display: flex;
+  #logo{
+    display: inline-block;
+    padding: .5em;
+
+    img{
+      border-radius: 1em;
+      width: 5em;
+      height: 5em;
+    }
+  }
+
+  div a {
+    position: absolute;
+    color: black;
+  }
+
+  div div {
+    width: 100%; 
+    float: right;
+  }
+
+  div p a {
+    right: 0; 
+    bottom: 0;
+    font-size: 28px;
+    text-decoration: none;
+    padding: .25rem;
+    font-style:italic;
+  }
+
+  div p a:hover {
+    background-color: lightgrey;
+    border-radius: .5rem;
+    padding: .25rem;
+    font-style:italic;
+  }
+}
+
+div.myslider {
+  z-index: -1;
+}
+
+div.myslider div {
+  width: 100%;
+}
+
+div.myslider div img {
+  width: 100%;
+}
+
+.slick-dots li button {
+  color: black;
+}
+
+.myslider.slick-dots {
+  font-size: 54px !important;
+}
+
+button#slick-slide-control {
+  color: black;
+}
+
+/*----- Main Styling -----*/
+
+article.membCol {
+  text-align: center;
+  border: solid 1px black;
+}
+
+.bodyDiv {
+  max-width: 75rem;
+		margin: auto;
+}
+
+/*----- Column Layout -----*/
+
+.row {
+  clear: both;
+}
+
+.column {
+  padding: 0.5rem 1%;
+}
+
+@for $i from 1 through 12 {
+  $w: ($i / 12) * 100%;
+  .small-#{$i} {
+    width: $w;
+    float: left;
+  }
+}
+
+article.llgallery figure {
+  width: 100%;
+  height: 1px;
+  padding-bottom: 67%; /*62.5%*/
+  padding-top: 0.5rem;
+  margin: 0 auto;
+  display: block;
+  float: none;
+}
+
+article.membCol {
+  padding-bottom: 1rem;
+}
+
+article.membCol a {
+  padding-left: 2%;
+}
+
+article.membCol div {
+  text-align: left;
+}
+
+article.membCol div a {
+  padding-left: 2%;
+}
+
+div.sec1 {
+  padding: 1rem 0;
+}
+
+div.sec1 article.membCol {
+  background-color: lighten(gainsboro, 10%);
+}
+
+div.sec1 article.membCol a {
+  display: block;
+  text-decoration: none;
+  padding: 0.25rem 0.25rem;
+  color: #00688b;
+
+  width: 80px;
+  height: 32px;
+  background-color: rgba(0, 0, 0, 0.1);
+
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin: 1rem auto;
+  white-space: nowrap;
+}
+
+div.sec2 {
+  padding-left: 2.25rem;
+  margin-right: -2.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+div.sec2 article.membCol {
+  border: none;
+  color: white;
+  background-color: #00688b;
+  margin-bottom: 0;
+}
+
+div.sec2 article.membCol a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+
+  padding: 2rem;
+  margin-top: -2rem;
+}
+
+div.sec3 {
+  padding: 1rem 0;
+}
+
+div.sec3 article.membCol {
+  border: none;
+  background-color: darkgray;
+}
+
+div.sec3 article.membCol div {
+  background-color: gainsboro;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  bottom: 0;
+}
+
+a.imgSelect {
+  display: block;
+  text-align: center;
+  width: auto;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.translucentOver:hover {
+    opacity: .2;
+}
+
+.blogHead {
+  color: white;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  opacity: 0.7;
+  top: 0;
+  font-weight: 600;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: $secondaryColor;
+}
+
+.blogFoot {
+  background-color: $secondaryColor;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: white;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  opacity: 0.7;
+  bottom: 0;
+  font-weight: 600;
+}
+
+.translucentOver {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s;
+  background-color: $secondaryColor;
+  opacity: .75;
+  position: absolute;
+}
+
+div.sec4 {
+  padding: 1rem 0;
+}
+
+div.sec4 article.membCol {
+  border: none;
+  background-color: silver;
+  padding: 0.5rem;
+}
+
+div.sec4 article.membCol a {
+  text-decoration: none;
+  color: #00688b;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cruiseMain{
+  padding: 10px;
+  div img{
+    width: 100%;
+  }
+  .cruiseBtn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 1rem;
+    background-color: $secondaryColor;
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+}
+
+.agentMain {
+  padding: 10px;
+  img{
+    width: 100%;
+    padding: 5px;
+  }
+}
+
+.bookMain {
+  form{
+    width: 100%;
+    padding: 10px;
+    label {
+      margin-top: 10px;
+      margin-bottom: -10px;
+    }
+    input{
+      width: 100%;
+      height: 50px;
+      margin-bottom: 25px;
+    }
+    select{
+      width: 100%;
+      height: 50px;
+      margin-bottom: 25px;
+    }
+    button {
+      margin-top: 10px;
+      width: 100%;
+      height: 50px;
+      border-radius: 2em;
+      background-color: $secondaryColor;
+      color: white;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 800;
+    }
+  }
+}
+
+footer {
+  bottom: 0;
+  background-color: $secondaryColor;
+  div.theirInfo{
+    padding: 10px;
+  }
+  article p {
+    padding: 0;
+  }
+.news form {
+  width: 100%;
+
+  input {
+    width: 100%;
+    padding: .5rem;
+  }
+  button {
+    width: 100%;
+    border-radius: 1rem;
+    padding: .5rem;
+  }
+}
+  article.phone p a {
+    color: white;
+  }
+  article.contact p a {
+    color: white;
+  }
+  ul.social {
+    margin: auto;
+    text-align: center;
+    height: 80px;
+    background-color: darken($color: $secondaryColor, $amount: 10%);
+    padding-left: 0;
+  }
+
+  ul.social li {
+    list-style-type: none;
+    display: inline-block;
+    padding-top: 20px;
+  }
+
+  ul.social li a {
+    font-size: 2.5rem;
+    padding-left: 1.5rem;
+    color: white;
+  }
+
+  ul.social li a:hover {
+    color: silver;
+  }
+  div.myInfo{
+    border: solid 1px white;
+   width: 100%;
+   background-color: white;
+   height: 100px;
+   p {
+     text-align: center;
+   }
+  }
+
+}

@@ -1,0 +1,123 @@
+body header {
+    max-width: 75rem;
+    margin: auto;
+}
+
+main{
+    max-width: 75rem;
+
+
+/*----- Column Layout -----*/
+
+        div.perfWrap {
+            margin-right: -13%;
+            margin-left: 5%;
+        }
+
+        @for $i from 1 through 12 {
+            $w: ($i / 12) * 100%;
+            .large-#{$i} {
+                width: $w; 
+                float: left;
+            }
+        }
+
+        
+
+
+}
+
+.cruiseMain {
+
+.contentContainer{
+    h1{
+        padding-left: 20px;
+    }
+        div.imgDiv{
+
+            img{
+                width: 350px;
+                height: 200px;
+                float: left;
+                margin: 20px;
+            }
+        }
+            div.contentDiv {
+                height: 250px;
+                display: flex;
+                flex-direction: column;
+
+                // span {
+
+                // }
+                .btnHolder{
+                    justify-content: flex-end;
+                        display: flex;
+
+                    button {
+                        border-radius: 1rem;
+                        cursor: pointer;
+                        max-width: 200px;
+                        // bottom: 0;
+                        // position: absolute;
+                    }
+                }
+            }
+        }
+    }
+
+.agentMain {
+    img{
+        float: right;
+        width: 400px;
+        height: 400px;
+    }
+}
+
+.bookMain {
+  form{
+    input{
+      width: 50%;
+    }
+    select{
+      width: 50%;
+    }
+    button {
+      width: 50%;
+    }
+  }
+}
+
+footer {
+    div.theirInfo {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-areas: "one two three" "four four four" "five five five";
+        grid-template-columns: 30% auto auto;
+        grid-template-rows: auto auto;
+        article {
+            padding: .25rem;
+        }
+        article.contact {
+            grid-area: one;
+        }
+        article.news {
+            grid-area: two;
+        }
+        article.why {
+            grid-area: three;
+        }
+        article.phone {
+            grid-area: four;
+        }
+        article.hours {
+            grid-area: five;
+        }
+    }
+    div.myInfo{
+        p{
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,147 @@
+/*  apply a natural box layout model to all elements  */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#hamburgerBtn {
+  display: none;
+} /* hide the navigation button by default */
+
+@media only screen and (max-width: 64rem) {
+  /* Navigation Button  -------------------------------------------------------- */
+  body {
+    padding-top: 50px;
+  }
+
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2.75rem;
+    li#searchBar {
+      float: right;
+      form {
+        margin-top: -45px;
+        input {
+          height: 35px;
+          width: 100%;
+          float: right;
+        }
+        button{
+        position: absolute;
+        right: 0;
+        bottom: 5px;
+        }
+      }
+    }
+    ul li {
+      display: block;
+      float: none;
+      z-index: 99;
+    }
+    ul li#searchBar form input {
+      width: 50%;
+    }
+  }
+  #hamburgerBtn {
+    display: block;
+    width: 50%;
+    height: 2.75rem;
+    background-image: url("../images/menuOpenWhite.png");
+    background-color: $menuColor;
+    background-position: 2vw center;
+    background-repeat: no-repeat;
+    border: 0 none;
+    outline: none;
+  }
+  #hamburgerBtn.open {
+    background: url("../images/menuCloseWhite.png");
+    background-position: 2vw center;
+    background-repeat: no-repeat;
+  }
+
+  /* Navigation Bar -------------------------------------------------------- */
+
+  #primaryNav {
+    height: 0;
+    overflow: hidden;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    z-index: 998;
+    font-family: Verdana;
+    font-weight: normal;
+  }
+  #secondaryNav {
+    width: 25%;
+  }
+  li#searchBar form input {
+    float: right;
+    width: 50%;
+  }
+
+  #primaryNav li.active a {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+  #primaryNav li a {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 2vw;
+    font-size: 14px;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.15);
+    color: white;
+    text-decoration: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  #primaryNav li a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Toggle the navigation bar to expand down  */
+  #primaryNav.open {
+    height: auto;
+    z-index: 99;
+  }
+  #primaryNav.closed {
+    height: 0;
+  }
+
+  /* Submenus – optional .parent class indicates dropdowns */
+  #primaryNav > li:hover > a {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  #primaryNav li.parent > a:after {
+    font-size: 0.75rem;
+    content: "\25BC";
+    color: rgba(255, 255, 255, 0.5);
+    float: right;
+  }
+  #primaryNav li.parent > a:hover {
+    background: rgba(0, 0, 0, 0.75);
+  }
+  /*hide the sub menu items by default*/
+  #primaryNav li ul {
+    display: none;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0;
+    padding-left: 0;
+    position: relative;
+  }
+  #primaryNav li ul a {
+    border-top: solid 1px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    padding: 10px 5%;
+    font-weight: normal;
+  }
+  #primaryNav li ul li {
+    list-style-type: none;
+    background-color: $secondaryColor;
+    width: 550px;
+  }
+  #primaryNav li:hover ul {
+    display: block;
+  }
+} /* End Mobile Styles */
