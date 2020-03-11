@@ -5,8 +5,11 @@ body header {
 
 main{
     max-width: 75rem;
-
-
+    .galleryFlex {
+        figure {
+        flex-basis: 25%;
+        }
+    }
 /*----- Column Layout -----*/
 
         div.perfWrap {
