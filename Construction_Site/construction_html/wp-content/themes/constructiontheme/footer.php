@@ -74,9 +74,22 @@
 
   <script src="<?php echo get_template_directory_uri(); ?>/js/menuItem.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/menuToggle.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/slick/slick.min.js"></script>
-
+  <script>
+    $(document).ready(function () {
+      $(".myslider").slick({
+        autoplay: true,
+        dots: true,
+        // arrows: true,
+        cssEase: "ease-out",
+        speed: 2000,
+        autoplaySpeed: 10000,
+        touchMove: true
+      });
+    });
+  </script>
   <script type="application/ld+json">
     {
       "@context": "http://schema.org",
@@ -96,21 +109,16 @@
       "priceRange": "$200 to $5000"
     }
   </script>
+<script>
+window.lazyLoadOptions = {
+    threshold: 0
+};
+</script>
 
-  <script>
-    $(document).ready(function () {
-      $(".myslider").slick({
-        autoplay: true,
-        dots: true,
-        arrows: false,
-        cssEase: "ease-out",
-        speed: 2000,
-        autoplaySpeed: 10000,
-        mobileFirst: true,
-        touchMove: true
-      });
-    });
-  </script>
+<!-- Download the script and execute it after lazyLoadOptions is defined -->
+<script async src="<?php echo get_template_directory_uri(); ?>/js/lazyload.min.js"></script>
+
+  
 </body>
 
 </html>

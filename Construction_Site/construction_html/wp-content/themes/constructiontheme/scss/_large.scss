@@ -91,6 +91,26 @@ main{
   }
 }
 
+.aboutMain {
+  div div{
+    border-right: 1px solid grey;
+    margin-bottom: 20px;
+  }
+    div div:nth-child(2){
+    border-right: 1px solid grey;
+  }
+  div div:last-child{
+    border-right: none;
+  }
+}
+
+.locationMain {
+  iframe{
+    height: 500px;
+    padding: 0px;
+  }
+}
+
 footer {
     div.theirInfo {
         max-width: 1200px;

@@ -6,10 +6,11 @@ $secondaryColor: #72A2C0;
 
 @import "largeNav";
 @import "mobilemenu";
+@import "wpPlugins";
 @import "small-default";
 @media only screen and (min-width: 35em) {
 @import "medium";
 }
-@media only screen and (min-width: 60rem) {
+@media only screen and (min-width: 64rem) {
 @import "large";
 }

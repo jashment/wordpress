@@ -12,6 +12,14 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
   <link href="<?php echo get_template_directory_uri(); ?>/slick/slick.css" rel="stylesheet" />
   <link href="<?php echo get_template_directory_uri(); ?>/slick/slick-theme.css" rel="stylesheet" />
+  <script src="https://www.google.com/recaptcha/api.js?render=6LdQWOIUAAAAADKlfo6jSX6jsDR56iCYn5kh4qlh"></script>
+<script>
+grecaptcha.ready(function() {
+    grecaptcha.execute('6LdQWOIUAAAAADKlfo6jSX6jsDR56iCYn5kh4qlh', {action: 'homepage'}).then(function(token) {
+       ...
+    });
+});
+</script>
 </head>
 
 <body>
@@ -26,7 +34,7 @@
 
   <nav>
     <div style="max-width: 1200px; margin: auto; height: 45px;">
-      <button id="hamburgerBtn"></button>
+      <button id="hamburgerBtn" class="closed"></button>
       <?php wp_nav_menu(array('menu_id' => 'primaryNav')); ?>
       <ul id="secondaryNav">
         <li id="searchBar">

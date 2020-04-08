@@ -52,6 +52,26 @@ main {
   }
 }
 
+.aboutMain {
+  div div{
+    border-right: 1px solid grey;
+    border-bottom: none;
+  
+  }
+  div div:nth-child(2){
+    border-right: none;
+  }
+  div div:last-child{
+    margin-bottom: 20px;
+  }
+}
+
+.locationMain {
+  iframe{
+    height: 400px;
+  }
+}
+
 footer {
   div.theirInfo {
     display: grid;
